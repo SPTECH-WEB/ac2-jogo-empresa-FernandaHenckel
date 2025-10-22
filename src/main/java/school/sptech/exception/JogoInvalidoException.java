@@ -1,12 +1,14 @@
 package school.sptech.exception;
 
-public class JogoInvalidoException extends RuntimeException {
+import school.sptech.Jogo;
+
+public class JogoInvalidoException extends Exception {
 
     public JogoInvalidoException() {
     }
 
-    public JogoInvalidoException(String message) {
-        super(message);
+    public JogoInvalidoException(String jogo) {
+        super("O jogo adicionado não pode ser nulo");
     }
 
     public JogoInvalidoException(String message, Throwable cause) {
@@ -19,5 +21,8 @@ public class JogoInvalidoException extends RuntimeException {
 
     public JogoInvalidoException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
+    }
+
+    public JogoInvalidoException(Object o, Object o1, Jogo jogo) {
     }
 }
